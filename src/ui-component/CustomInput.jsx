@@ -21,10 +21,10 @@ export function CustomSelect() {
     );
 }
 
-export function CustomTextarea() {
+export function CustomTextarea({ placeholder }) {
     return (
         <div>
-            <textarea rows="4" cols="25" />
+            <textarea placeholder={placeholder} rows="4" cols="25" />
         </div>
     );
 }

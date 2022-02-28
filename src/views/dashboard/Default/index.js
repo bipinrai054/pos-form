@@ -30,7 +30,7 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={12}>
                 <Paper sx={{ p: 4 }}>
-                    <CustomSelect />
+                    <CustomTextarea placeholder="Description" />
                 </Paper>
             </Grid>
         </Grid>
