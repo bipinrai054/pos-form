@@ -3,9 +3,11 @@ import '../styles/CustomInput.scss';
 // mui
 import { Typography } from '@mui/material';
 
+//  eslint-disable-next-line
 export function CustomInput({ type, placeholder, label }) {
     return (
         <div>
+            {/* eslint-disable-next-line */}
             <Typography sx={{ mt: 3, mb: 2 }}>
                 <label className="test" htmlFor="input">
                     {label}
@@ -16,6 +18,7 @@ export function CustomInput({ type, placeholder, label }) {
     );
 }
 
+//  eslint-disable-next-line
 export function CustomSelect({ label }) {
     return (
         <div>
@@ -34,10 +37,11 @@ export function CustomSelect({ label }) {
     );
 }
 
+//  eslint-disable-next-line
 export function CustomTextarea({ placeholder }) {
     return (
         <div>
-            <textarea placeholder={placeholder} rows="4" cols="25" />
+            <textarea placeholder={placeholder} rows="3" />
         </div>
     );
 }

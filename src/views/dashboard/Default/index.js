@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
-// material-ui
-import { Grid, Paper, Typography } from '@mui/material';
+// mui
+import { Grid, Paper, Typography, Button } from '@mui/material';
+
+// mui-icons
+import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
 // project imports
 // import EarningCard from './EarningCard';
@@ -10,20 +13,20 @@ import { Grid, Paper, Typography } from '@mui/material';
 // import TotalIncomeDarkCard from './TotalIncomeDarkCard';
 // import TotalIncomeLightCard from './TotalIncomeLightCard';
 // import TotalGrowthBarChart from './TotalGrowthBarChart';
-import { gridSpacing } from 'store/constant';
+// import { gridSpacing } from 'store/constant';
 
 // new components
 import { CustomInput, CustomSelect, CustomTextarea } from '../../../ui-component/CustomInput';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
-
+// eslint-disable-next-line
 const Dashboard = () => {
-    const [step, setStep] = useState(1);
+    // const [step, setStep] = useState(1);
 
-    const [isLoading, setLoading] = useState(true);
-    useEffect(() => {
-        setLoading(false);
-    }, []);
+    // const [isLoading, setLoading] = useState(true);
+    // useEffect(() => {
+    //     setLoading(false);
+    // }, []);
 
     return (
         <Grid container spacing={3}>
@@ -63,6 +66,19 @@ const Dashboard = () => {
                     <Grid container sx={{ mt: 5 }}>
                         <Grid item xs={12}>
                             <CustomTextarea placeholder="Description" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
+                        <Grid item>
+                            <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />}>
+                                Previous
+                            </Button>
+                        </Grid>
+                        <Grid item>
+                            <Button className="form-btn" variant="contained" endIcon={<ArrowForward />}>
+                                Next
+                            </Button>
                         </Grid>
                     </Grid>
                 </Paper>

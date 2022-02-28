@@ -1,30 +1,41 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 // material-ui
 import { useTheme, styled } from '@mui/material/styles';
-import { Avatar, Box, ButtonBase, Card, Grid, InputAdornment, OutlinedInput, Popper } from '@mui/material';
+import {
+    Avatar,
+    Box,
+    ButtonBase,
+    //  Card, Grid,
+    InputAdornment,
+    OutlinedInput
+    // Popper
+} from '@mui/material';
 
 // third-party
-import PopupState, { bindPopper, bindToggle } from 'material-ui-popup-state';
+import PopupState, {
+    //  bindPopper,
+    bindToggle
+} from 'material-ui-popup-state';
 
 // project imports
-import Transitions from 'ui-component/extended/Transitions';
+// import Transitions from 'ui-component/extended/Transitions';
 
 // assets
 import { IconAdjustmentsHorizontal, IconSearch, IconX } from '@tabler/icons';
 import { shouldForwardProp } from '@mui/system';
 
 // styles
-const PopperStyle = styled(Popper, { shouldForwardProp })(({ theme }) => ({
-    zIndex: 1100,
-    width: '99%',
-    top: '-55px !important',
-    padding: '0 12px',
-    [theme.breakpoints.down('sm')]: {
-        padding: '0 10px'
-    }
-}));
+// const PopperStyle = styled(Popper, { shouldForwardProp })(({ theme }) => ({
+//     zIndex: 1100,
+//     width: '99%',
+//     top: '-55px !important',
+//     padding: '0 12px',
+//     [theme.breakpoints.down('sm')]: {
+//         padding: '0 10px'
+//     }
+// }));
 
 const OutlineInputStyle = styled(OutlinedInput, { shouldForwardProp })(({ theme }) => ({
     width: 434,
@@ -115,14 +126,16 @@ MobileSearch.propTypes = {
 
 // ==============================|| SEARCH INPUT ||============================== //
 
+// eslint-disable-next-line
 const SearchSection = () => {
-    const theme = useTheme();
-    const [value, setValue] = useState('');
+    // const theme = useTheme();
+    // const [value, setValue] = useState('');
 
     return (
         <>
             {/* <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                 <PopupState variant="popper" popupId="demo-popup-popper">
+                
                     {(popupState) => (
                         <>
                             <Box sx={{ ml: 2 }}>
