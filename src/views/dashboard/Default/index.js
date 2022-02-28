@@ -29,13 +29,8 @@ const Dashboard = () => {
                 <Typography variant="h4">Dashboard / Menu / Create</Typography>
             </Grid>
             <Grid item xs={12}>
-                <Paper>
-                    <CustomInput type="text" placeholder="category" />
+                <Paper sx={{ p: 4 }}>
                     <CustomSelect />
-                    <CustomInput type="file" />
-                    <CustomTextarea />
-                    <CustomInput type="number" placeholder="Enter number" />
-                    <CustomInput type="date" placeholder="Enter date" />
                 </Paper>
             </Grid>
         </Grid>

@@ -1,3 +1,5 @@
+import '../styles/CustomInput.scss';
+
 export function CustomInput({ type, placeholder }) {
     return (
         <div>
@@ -22,7 +24,7 @@ export function CustomSelect() {
 export function CustomTextarea() {
     return (
         <div>
-            <textarea rows="4" col="4" />
+            <textarea rows="4" cols="25" />
         </div>
     );
 }
