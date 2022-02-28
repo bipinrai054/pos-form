@@ -3,8 +3,12 @@ import React from 'react';
 // mui
 import { Stepper, Step, StepLabel } from '@mui/material';
 
+// eslint-disable-next-line
 export default function CustomStepper({ activeStep }) {
-    const [showVariantDetails, setShowVariantDetails] = React.useState(true);
+    const [
+        showVariantDetails
+        //  setShowVariantDetails
+    ] = React.useState(true);
 
     return (
         <>

@@ -30,8 +30,25 @@ const Dashboard = () => {
 
     const [activeStep, setActiveStep] = React.useState(0);
 
-    const prevStep = () => setActiveStep((currentStep) => currentStep - 1);
-    const nextStep = () => setActiveStep((currentStep) => currentStep + 1);
+    // eslint-disable-next-line
+    const prevStep = () => {
+        if (activeStep <= 0) {
+            setActiveStep(0);
+        } else {
+            setActiveStep((currentStep) => currentStep - 1);
+        }
+    };
+
+    // eslint-disable-next-line
+    const nextStep = () => {
+        if (activeStep >= 4) {
+            setActiveStep(4);
+        } else {
+            setActiveStep((currentStep) => currentStep + 1);
+        }
+    };
+
+    console.log(activeStep);
 
     return (
         <Grid container spacing={3}>
