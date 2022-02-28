@@ -36,26 +36,26 @@ const Dashboard = () => {
                         <Grid item xs={6}>
                             <Grid container flexDirection="column" spacing={3}>
                                 <Grid item>
-                                    <CustomSelect />
+                                    <CustomSelect label="Category" />
                                 </Grid>
                                 <Grid item>
-                                    <CustomInput type="text" placeholder="Item Name" />
+                                    <CustomInput type="text" placeholder="Name" label="Item Name" />
                                 </Grid>
                                 <Grid item>
-                                    <CustomInput type="number" placeholder="Alert Quantity" />
+                                    <CustomInput type="number" placeholder="10" label="Alert Quantity" />
                                 </Grid>
                             </Grid>
                         </Grid>
                         <Grid item xs={6}>
                             <Grid container flexDirection="column" spacing={3}>
                                 <Grid item>
-                                    <CustomSelect />
+                                    <CustomSelect label="Brand" />
                                 </Grid>
                                 <Grid item>
-                                    <CustomInput type="date" />
+                                    <CustomInput type="date" label="Expiry Date" />
                                 </Grid>
                                 <Grid item>
-                                    <CustomInput type="file" />
+                                    <CustomInput label="Image" type="file" />
                                 </Grid>
                             </Grid>
                         </Grid>

@@ -1,16 +1,29 @@
 import '../styles/CustomInput.scss';
 
-export function CustomInput({ type, placeholder }) {
+// mui
+import { Typography } from '@mui/material';
+
+export function CustomInput({ type, placeholder, label }) {
     return (
         <div>
-            <input type={type} placeholder={placeholder} />
+            <Typography sx={{ mt: 3, mb: 2 }}>
+                <label className="test" htmlFor="input">
+                    {label}
+                </label>
+            </Typography>
+            <input id="input" type={type} placeholder={placeholder} />
         </div>
     );
 }
 
-export function CustomSelect() {
+export function CustomSelect({ label }) {
     return (
         <div>
+            <Typography sx={{ mt: 4, mb: 1 }}>
+                <label className="test" htmlFor="input">
+                    {label}
+                </label>
+            </Typography>
             <select>
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
