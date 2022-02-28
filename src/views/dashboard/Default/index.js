@@ -1,5 +1,4 @@
-// import { useEffect, useState } from 'react';
-
+import React from 'react';
 // mui
 import { Grid, Paper, Typography, Button } from '@mui/material';
 
@@ -17,6 +16,7 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
 // new components
 import { CustomInput, CustomSelect, CustomTextarea } from '../../../ui-component/CustomInput';
+import CustomStepper from '../../../ui-component/CustomStepper';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 // eslint-disable-next-line
@@ -28,6 +28,11 @@ const Dashboard = () => {
     //     setLoading(false);
     // }, []);
 
+    const [activeStep, setActiveStep] = React.useState(0);
+
+    const prevStep = () => setActiveStep((currentStep) => currentStep - 1);
+    const nextStep = () => setActiveStep((currentStep) => currentStep + 1);
+
     return (
         <Grid container spacing={3}>
             <Grid item>
@@ -35,6 +40,12 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={12}>
                 <Paper sx={{ p: 3 }}>
+                    <Grid sx={{ p: 1, display: 'flex', justifyContent: 'center' }}>
+                        <Grid item xs={8}>
+                            <CustomStepper activeStep={activeStep} />
+                        </Grid>
+                    </Grid>
+
                     <Grid container spacing={3}>
                         <Grid item xs={6}>
                             <Grid container flexDirection="column" spacing={3}>
@@ -71,12 +82,12 @@ const Dashboard = () => {
 
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
-                            <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />}>
+                            <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />} onClick={prevStep}>
                                 Previous
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button className="form-btn" variant="contained" endIcon={<ArrowForward />}>
+                            <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
                                 Next
                             </Button>
                         </Grid>
