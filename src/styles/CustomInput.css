@@ -55,6 +55,11 @@ textarea {
   background-color: #f5f8fa;
   border-color: #f5f8fa;
   color: #5e6278;
+  padding-top: 0.825rem;
+  padding-bottom: 0.825rem;
+  padding-left: 1.5rem;
+  font-size: 1.15rem;
+  border-radius: 0.475rem;
 }
 
 textarea:focus {
