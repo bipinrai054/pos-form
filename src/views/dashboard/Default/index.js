@@ -1,6 +1,6 @@
 import React from 'react';
 // mui
-import { Grid, Paper, Typography, Button } from '@mui/material';
+import { Grid, Paper, Typography, Button, Box } from '@mui/material';
 
 // mui-icons
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
@@ -17,6 +17,7 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 // new components
 import { CustomInput, CustomSelect, CustomTextarea } from '../../../ui-component/CustomInput';
 import CustomStepper from '../../../ui-component/CustomStepper';
+import SamplePage from '../../sample-page/index';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 // eslint-disable-next-line
@@ -63,7 +64,9 @@ const Dashboard = () => {
                         </Grid>
                     </Grid>
 
-                    <Grid container spacing={3}>
+                    {/* item details start */}
+
+                    {/* <Grid container spacing={3}>
                         <Grid item xs={6}>
                             <Grid container flexDirection="column" spacing={3}>
                                 <Grid item>
@@ -95,7 +98,13 @@ const Dashboard = () => {
                         <Grid item xs={12}>
                             <CustomTextarea placeholder="Description" />
                         </Grid>
-                    </Grid>
+                    </Grid> */}
+
+                    {/* item details end */}
+
+                    {/* variant choosing component start */}
+                    {/* <SamplePage /> */}
+                    {/* varaint choosing component end */}
 
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>

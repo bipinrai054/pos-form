@@ -5,7 +5,7 @@
 // import MainCard from 'ui-component/cards/MainCard';
 
 // mui
-import { Grid, Typography, Paper } from '@mui/material';
+import { Grid, Typography, Paper, Box } from '@mui/material';
 
 // components
 import { CustomCheckbox } from '../../ui-component/CustomInput';
@@ -13,29 +13,23 @@ import { CustomCheckbox } from '../../ui-component/CustomInput';
 // ==============================|| SAMPLE PAGE ||============================== //
 
 const SamplePage = () => (
-    <Grid container spacing={3}>
-        <Grid item>
-            <Typography variant="h4">Dashboard / Menu / Create</Typography>
-        </Grid>
-
+    <Grid container spacing={3} sx={{ px: 58, py: 10 }}>
         <Grid item xs={12}>
-            <Paper sx={{ height: '100%', p: 30 }}>
-                <Grid container flexDirection="column" sx={{ pb: 5 }}>
-                    <Typography variant="h3" gutterBottom>
-                        Choose Item Type
-                    </Typography>
-                    <Typography variant="subtitle1" style={{ color: '#a6a6b9' }}>
-                        Choose the type of item you want to create.
-                    </Typography>
-                </Grid>
+            <Paper sx={{ p: 5 }}>
+                <Typography variant="h3" gutterBottom>
+                    Choose Item Type
+                </Typography>
+                <Typography variant="subtitle1" style={{ color: '#a6a6b9' }} gutterBottom>
+                    Choose the type of item you want to create.
+                </Typography>
 
-                <Grid container>
-                    <Grid item xs={6}>
-                        <CustomCheckbox type="radio" label="Variant" nameType="item_variant" />
+                <Grid container spacing={5}>
+                    <Grid item>
+                        <CustomCheckbox type="radio" label="Variant" id="variant" htmlfor="variant" nameType="item_variant" />
                     </Grid>
 
-                    <Grid item xs={6}>
-                        <CustomCheckbox type="radio" label="Non-variant" nameType="item_variant" />
+                    <Grid item>
+                        <CustomCheckbox type="radio" label="Non-variant" id="non_variant" htmlfor="non_variant" nameType="item_variant" />
                     </Grid>
                 </Grid>
             </Paper>

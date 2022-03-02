@@ -47,13 +47,14 @@ export function CustomTextarea({ placeholder }) {
 }
 
 // eslint-disable-next-line
-export function CustomCheckbox({ label, nameType }) {
+export function CustomCheckbox({ label, nameType, id, htmlfor }) {
     return (
-        <div>
-            <Typography>
-                <label htmlFor="radio">{(label, nameType)}</label>
-            </Typography>
-            <input id="radio" type="radio" name={nameType} />
+        <div className="check-container">
+            <input id={id} className="btn-check" type="radio" name={nameType} />
+
+            <label className="test" htmlFor={htmlfor}>
+                {label}
+            </label>
         </div>
     );
 }
