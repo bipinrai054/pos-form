@@ -28,8 +28,8 @@ input {
     transition: color 0.2s ease, background-color 0.2s ease;
 
     min-height: calc(1.5em + 1.65rem + 2px);
-    padding: 0.825rem 1.5rem;
-    font-size: 1.15rem;
+    padding: 0.825rem 1rem;
+    // font-size: 1.15rem;
     border-radius: 0.475rem;
 }
 
@@ -51,10 +51,8 @@ select {
     color: #5e6278;
     transition: color 0.2s ease, background-color 0.2s ease;
 
-    padding-top: 0.825rem;
-    padding-bottom: 0.825rem;
-    padding-left: 1.5rem;
-    font-size: 1.15rem;
+    padding: 0.825rem;
+    // font-size: 1.15rem;
     border-radius: 0.475rem;
 }
 select:focus {

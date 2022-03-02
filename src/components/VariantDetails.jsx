@@ -20,7 +20,7 @@ export default function VariantDetails() {
                         <CustomSelect label="Select Variable" />
                     </Grid>
                 </Grid>
-                <Grid container sx={{ mt: 10 }}>
+                <Grid container sx={{ mt: 7 }}>
                     <CustomTable />
                 </Grid>
             </Grid>

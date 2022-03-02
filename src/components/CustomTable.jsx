@@ -27,9 +27,9 @@ export default function BasicTable() {
                 <TableBody>
                     <TableRow>
                         <TableCell component="th" scope="row">
-                            <CustomInput type="text" placeholder="Item Variant Name" />
+                            <CustomInput type="text" placeholder="Variant Name" />
                         </TableCell>
-                        <TableCell component="th" scope="row">
+                        <TableCell style={{ width: '120px' }} component="th" scope="row">
                             <CustomSelect />
                         </TableCell>
                         <TableCell component="th" scope="row">
