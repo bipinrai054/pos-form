@@ -16,9 +16,9 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
 // new components
 import CustomStepper from '../../../ui-component/CustomStepper';
-import VariantChoice from '../../../components/VariantChoice';
-import ItemDetails from '../../../components/ItemDetails';
 import VariantDetails from '../../../components/VariantDetails';
+// import VariantChoice from '../../../components/VariantChoice';
+// import ItemDetails from '../../../components/ItemDetails';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 // eslint-disable-next-line

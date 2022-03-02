@@ -5,10 +5,13 @@
 // import MainCard from 'ui-component/cards/MainCard';
 
 // mui
-import { Grid, Typography, Paper } from '@mui/material';
+import {
+    // Grid, Typography,
+    Paper
+} from '@mui/material';
 
 // components
-import { CustomCheckbox } from '../../ui-component/CustomInput';
+// import { CustomCheckbox } from '../../ui-component/CustomInput';
 import ItemDetails from '../../components/ItemDetails';
 
 // ==============================|| SAMPLE PAGE ||============================== //

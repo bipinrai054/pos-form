@@ -1,9 +1,9 @@
 // mui
-import { Grid, Paper, TableContainer, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 
 // component
 import { CustomSelect } from '../ui-component/CustomInput';
-import Table from './Table';
+import CustomTable from './CustomTable';
 
 export default function VariantDetails() {
     return (
@@ -21,7 +21,7 @@ export default function VariantDetails() {
                     </Grid>
                 </Grid>
                 <Grid container sx={{ mt: 10 }}>
-                    <Table />
+                    <CustomTable />
                 </Grid>
             </Grid>
         </>
