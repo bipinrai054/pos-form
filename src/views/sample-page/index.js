@@ -13,14 +13,21 @@ import { CustomCheckbox } from '../../ui-component/CustomInput';
 // ==============================|| SAMPLE PAGE ||============================== //
 
 const SamplePage = () => (
-    <Grid container>
+    <Grid container spacing={3}>
         <Grid item>
             <Typography variant="h4">Dashboard / Menu / Create</Typography>
         </Grid>
 
-        <Grid item xs={12} sx={{ height: '100%' }}>
-            <Paper>
-                <Typography variant="h3">Choose Item Type</Typography>
+        <Grid item xs={12}>
+            <Paper sx={{ height: '100%', p: 30 }}>
+                <Grid container flexDirection="column" sx={{ pb: 5 }}>
+                    <Typography variant="h3" gutterBottom>
+                        Choose Item Type
+                    </Typography>
+                    <Typography variant="subtitle1" style={{ color: '#a6a6b9' }}>
+                        Choose the type of item you want to create.
+                    </Typography>
+                </Grid>
 
                 <Grid container>
                     <Grid item xs={6}>
