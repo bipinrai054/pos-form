@@ -1,16 +1,8 @@
-// material-ui
-// import { Typography } from '@mui/material';
-
-// project imports
-// import MainCard from 'ui-component/cards/MainCard';
-
 // mui
 import { Grid, Typography, Paper } from '@mui/material';
 
 // components
-import { CustomCheckbox } from '../../ui-component/CustomInput';
-
-// ==============================|| SAMPLE PAGE ||============================== //
+import { CustomCheckbox } from 'ui-component/CustomInput';
 
 const SamplePage = () => (
     <Grid container spacing={3} sx={{ px: 58, py: 10 }}>

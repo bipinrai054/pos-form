@@ -1,6 +1,6 @@
 import React from 'react';
 // mui
-import { Grid, Paper, Typography, Button, Box } from '@mui/material';
+import { Grid, Paper, Typography, Button } from '@mui/material';
 
 // mui-icons
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
@@ -15,9 +15,10 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 // import { gridSpacing } from 'store/constant';
 
 // new components
-import { CustomInput, CustomSelect, CustomTextarea } from '../../../ui-component/CustomInput';
 import CustomStepper from '../../../ui-component/CustomStepper';
-import SamplePage from '../../sample-page/index';
+import VariantChoice from '../../../components/VariantChoice';
+import ItemDetails from '../../../components/ItemDetails';
+import VariantDetails from '../../../components/VariantDetails';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 // eslint-disable-next-line
@@ -65,46 +66,14 @@ const Dashboard = () => {
                     </Grid>
 
                     {/* item details start */}
-
-                    {/* <Grid container spacing={3}>
-                        <Grid item xs={6}>
-                            <Grid container flexDirection="column" spacing={3}>
-                                <Grid item>
-                                    <CustomSelect label="Category" />
-                                </Grid>
-                                <Grid item>
-                                    <CustomInput type="text" placeholder="Name" label="Item Name" />
-                                </Grid>
-                                <Grid item>
-                                    <CustomInput type="number" placeholder="10" label="Alert Quantity" />
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Grid container flexDirection="column" spacing={3}>
-                                <Grid item>
-                                    <CustomSelect label="Brand" />
-                                </Grid>
-                                <Grid item>
-                                    <CustomInput type="date" label="Expiry Date" />
-                                </Grid>
-                                <Grid item>
-                                    <CustomInput label="Image" type="file" />
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid container sx={{ mt: 5 }}>
-                        <Grid item xs={12}>
-                            <CustomTextarea placeholder="Description" />
-                        </Grid>
-                    </Grid> */}
-
+                    {/* <ItemDetails /> */}
                     {/* item details end */}
 
                     {/* variant choosing component start */}
-                    {/* <SamplePage /> */}
+                    {/* <VariantChoice /> */}
                     {/* varaint choosing component end */}
+
+                    <VariantDetails />
 
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
