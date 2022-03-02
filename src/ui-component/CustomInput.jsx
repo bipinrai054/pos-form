@@ -9,9 +9,11 @@ export function CustomInput({ type, placeholder, label }) {
         <div>
             {/* eslint-disable-next-line */}
             <Typography sx={{ mt: 3, mb: 1 }}>
-                <label className="test" htmlFor="input">
-                    {label}
-                </label>
+                {label && (
+                    <label className="test" htmlFor="input">
+                        {label}
+                    </label>
+                )}
             </Typography>
             <input id="input" type={type} placeholder={placeholder} />
         </div>
@@ -23,9 +25,11 @@ export function CustomSelect({ label }) {
     return (
         <div>
             <Typography sx={{ mt: 3, mb: 1 }}>
-                <label className="test" htmlFor="select">
-                    {label}
-                </label>
+                {label && (
+                    <label className="test" htmlFor="select">
+                        {label}
+                    </label>
+                )}
             </Typography>
             <select id="select">
                 <option value="volvo">Volvo</option>

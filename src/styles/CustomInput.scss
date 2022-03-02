@@ -117,3 +117,18 @@ input[type='radio']:checked + label {
     border-color: #009ef7;
     background-color: #f1faff;
 }
+
+// add and remove button
+.add-btn {
+    cursor: pointer;
+    &:hover {
+        color: #1e88e5;
+    }
+}
+
+.remove-btn {
+    cursor: pointer;
+    &:hover {
+        color: #c62828;
+    }
+}

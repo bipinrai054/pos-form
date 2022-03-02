@@ -14,7 +14,7 @@ export default function CustomStepper({ activeStep }) {
         <>
             <Stepper activeStep={activeStep}>
                 <Step>
-                    <StepLabel> Item Details</StepLabel>
+                    <StepLabel>Item Details</StepLabel>
                 </Step>
                 <Step>
                     <StepLabel>Choose The Variant</StepLabel>
