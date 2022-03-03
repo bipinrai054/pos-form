@@ -85,13 +85,11 @@ textarea:focus {
   width: 10rem;
 }
 
-.check-container {
-  margin-top: 5em;
-}
-
-.check-container label {
-  border: 1px dashed #ccced8;
-  padding: 2em;
+.checkbox-container label {
+  width: 30%;
+  margin: 1em;
+  border: 2px dashed #ccced8;
+  padding: 1.5em;
   cursor: pointer;
   border-radius: 10px;
 }

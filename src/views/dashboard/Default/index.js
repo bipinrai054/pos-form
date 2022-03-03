@@ -16,6 +16,7 @@ import ItemDetails from '../../../components/ItemDetails';
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 const Dashboard = () => {
     const [activeStep, setActiveStep] = React.useState(0);
+    const [test, setTest] = React.useState('');
 
     const prevStep = (e) => {
         e.preventDefault();
@@ -58,9 +59,9 @@ const Dashboard = () => {
                             case 2:
                                 return <VariantDetails />;
                             case 3:
-                                return <Typography variant="h5">Thank you for your order!</Typography>;
+                                return <Typography variant="h5">Thank you for your order! </Typography>;
                             default:
-                                return <Typography variant="h5">Thank you for your order!</Typography>;
+                                return <Typography variant="h5">Thank you for your order! </Typography>;
                         }
                     })()}
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>

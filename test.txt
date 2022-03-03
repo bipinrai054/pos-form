@@ -1,57 +1,66 @@
- <Grid container spacing={3}>
-            <Grid item>
-                <Typography variant="h4">Dashboard / Menu / Create</Typography>
+<Grid container spacing={5}>
+                <Grid item>
+                    {/* <CustomCheckbox type="radio" label="Single" id="variant" htmlfor="variant" nameType="item_variant" /> */}
+                    <input type="radio" id="test" name="test" />
+                    <label htmlFor="test">Test</label>
+                </Grid>
+
+                <Grid item>
+                    {/* <CustomCheckbox type="radio" label="Variable" id="non_variant" htmlfor="non_variant" nameType="item_variant" /> */}
+                    <input type="radio" id="test1" name="test" />
+                    <label htmlFor="test1">Test1</label>
+                </Grid>
             </Grid>
-            <Grid item xs={12}>
-                <Paper sx={{ p: 3 }}>
-                    <Grid sx={{ p: 1, display: 'flex', justifyContent: 'center' }}>
-                        <Grid item xs={8}>
-                            <CustomStepper activeStep={activeStep} />
+
+-------------------------------------------------------------------------
+             <div className="check-container">
+            <input id={id} className="btn-check" type="radio" name={nameType} />
+
+            <label htmlFor={htmlfor}>
+                {label == 'Single' ? <AccessibilityIcon /> : <AccessTimeIcon />}
+                {label}
+                {/* <Typography variant="subtitle2">Test</Typography> */}
+            </label>
+        </div>
+
+
+        ----------------------------------------------------------------
+
+         <Box className="test" textAlign="left" sx={{ display: 'flex', justifyContent: 'center' }} alignItems="center">
+                <input type="radio" id="test" name="test" />
+                <label htmlFor="test">
+                    <Grid container>
+                        <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
+                            <ShoppingCartIcon sx={{ fontSize: '42px' }} />
+                        </Grid>
+
+                        <Grid item xs={10}>
+                            <Typography fontWeight="fontWeightBold" fontSize="large">
+                                Single
+                            </Typography>
+                            <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </Typography>
                         </Grid>
                     </Grid>
+                </label>
 
-                    {activeStep === 0 ? (
-                        <VariantChoice />
-                    ) : activeStep === 1 ? (
-                        <ItemDetails />
-                    ) : activeStep === 2 ? (
-                        <VariantDetails />
-                    ) : null}
-
-                    <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
-                        <Grid item>
-                            {activeStep === 0 ? null : (
-                                <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />} onClick={prevStep}>
-                                    Previous
-                                </Button>
-                            )}
+                {/* <CustomCheckbox type="radio" label="Variable" id="non_variant" htmlfor="non_variant" nameType="item_variant" /> */}
+                <input type="radio" id="test1" name="test" />
+                <label htmlFor="test1">
+                    <Grid container>
+                        <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
+                            <AccessTimeIcon sx={{ fontSize: '42px' }} />
                         </Grid>
-                        <Grid item>
-                            {activeStep === 4 ? null : (
-                                <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
-                                    {activeStep === 3 ? 'Submit' : 'Next'}
-                                </Button>
-                            )}
+
+                        <Grid item xs={10}>
+                            <Typography fontWeight="fontWeightBold" fontSize="large">
+                                Variable
+                            </Typography>
+                            <Typography variant="subtitle1" sx={{ color: '#a1a5b7' }}>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            </Typography>
                         </Grid>
                     </Grid>
-                </Paper>
-            </Grid>
-        </Grid>
-
-
-
-
-         {(() => {
-                switch (activeStep) {
-                    case 0:
-                        return <VariantDetails />;
-                    case 1:
-                        return <VariantChoice />;
-                    case 2:
-                        return <ItemDetails />;
-                    case 3:
-                        return <Typography variant="h5">Thank you for your order!</Typography>;
-                    default:
-                        return <Typography variant="h5">Thank you for your order!</Typography>;
-                }
-            })()}
+                </label>
+            </Box>

@@ -1,13 +1,13 @@
+/*eslint-disable */
+
 import '../styles/CustomInput.scss';
 
 // mui
-import { Typography } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 
-//  eslint-disable-next-line
 export function CustomInput({ type, placeholder, label, value }) {
     return (
         <div>
-            {/* eslint-disable-next-line */}
             <Typography sx={{ mt: 3, mb: 1 }}>
                 {label && (
                     <label className="test" htmlFor="input">
@@ -20,7 +20,10 @@ export function CustomInput({ type, placeholder, label, value }) {
     );
 }
 
-//  eslint-disable-next-line
+// mui icon
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
+
 export function CustomSelect({ label }) {
     return (
         <div>
@@ -41,7 +44,6 @@ export function CustomSelect({ label }) {
     );
 }
 
-//  eslint-disable-next-line
 export function CustomTextarea({ placeholder }) {
     return (
         <div>
@@ -50,15 +52,30 @@ export function CustomTextarea({ placeholder }) {
     );
 }
 
-// eslint-disable-next-line
-export function CustomCheckbox({ label, nameType, id, htmlfor }) {
+export function CustomCheckbox({ label, nameType, id }) {
     return (
-        <div className="check-container">
-            <input id={id} className="btn-check" type="radio" name={nameType} />
+        <>
+            <input type="radio" id={id} name={nameType} />
+            <label htmlFor={id}>
+                <Grid container>
+                    <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
+                        {label == 'Single' ? (
+                            <AccessibilityIcon sx={{ fontSize: '42px' }} />
+                        ) : (
+                            <ShoppingCartIcon sx={{ fontSize: '42px' }} />
+                        )}
+                    </Grid>
 
-            <label className="test" htmlFor={htmlfor}>
-                {label}
+                    <Grid item xs={10}>
+                        <Typography fontWeight="fontWeightBold" fontSize="large">
+                            {label}
+                        </Typography>
+                        <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </Typography>
+                    </Grid>
+                </Grid>
             </label>
-        </div>
+        </>
     );
 }
