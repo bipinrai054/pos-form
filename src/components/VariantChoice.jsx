@@ -5,7 +5,12 @@ import { Grid, Typography, Paper } from '@mui/material';
 import { CustomCheckbox } from 'ui-component/CustomInput';
 
 const SamplePage = () => (
-    <Grid container spacing={3} sx={{ px: 58, py: 10 }}>
+    <Grid
+        container
+        spacing={3}
+        // sx={{ px: 58, py: 10 }}
+        sx={{ py: 10, px: 45 }}
+    >
         <Grid item xs={12}>
             <Paper sx={{ p: 5 }}>
                 <Typography variant="h3" gutterBottom>

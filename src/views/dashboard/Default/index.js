@@ -42,9 +42,7 @@ const Dashboard = () => {
                 <Paper sx={{ p: 3 }}>
                     <Grid sx={{ p: 1, display: 'flex', justifyContent: 'center' }}>
                         <Grid item xs={8}>
-                            <CustomStepper
-                            //  activeStep={activeStep}
-                            />
+                            <CustomStepper activeStep={activeStep} />
                         </Grid>
                     </Grid>
 
@@ -58,22 +56,12 @@ const Dashboard = () => {
 
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
-                            <Button
-                                className="form-btn"
-                                variant="outlined"
-                                startIcon={<ArrowBack />}
-                                // onClick={prevStep}
-                            >
+                            <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />} onClick={prevStep}>
                                 Previous
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button
-                                className="form-btn"
-                                variant="contained"
-                                endIcon={<ArrowForward />}
-                                // onClick={nextStep}
-                            >
+                            <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
                                 Next
                             </Button>
                         </Grid>
