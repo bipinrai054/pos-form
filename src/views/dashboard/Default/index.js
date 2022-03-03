@@ -56,14 +56,18 @@ const Dashboard = () => {
 
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
-                            <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />} onClick={prevStep}>
-                                Previous
-                            </Button>
+                            {activeStep === 0 ? null : (
+                                <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />} onClick={prevStep}>
+                                    Previous
+                                </Button>
+                            )}
                         </Grid>
                         <Grid item>
-                            <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
-                                Next
-                            </Button>
+                            {activeStep === 3 ? null : (
+                                <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
+                                    Next
+                                </Button>
+                            )}
                         </Grid>
                     </Grid>
                 </Paper>
