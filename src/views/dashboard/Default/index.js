@@ -73,7 +73,9 @@ const Dashboard = () => {
                     {/* <VariantChoice /> */}
                     {/* varaint choosing component end */}
 
+                    {/* variant details start */}
                     <VariantDetails />
+                    {/* variant details end */}
 
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
