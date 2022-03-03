@@ -12,6 +12,7 @@ import CustomStepper from '../../../ui-component/CustomStepper';
 import VariantDetails from '../../../components/VariantDetails';
 import VariantChoice from '../../../components/VariantChoice';
 import ItemDetails from '../../../components/ItemDetails';
+import InputSummary from '../../../components/InputSummary';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 const Dashboard = () => {
@@ -58,10 +59,6 @@ const Dashboard = () => {
                                 return <ItemDetails />;
                             case 2:
                                 return <VariantDetails />;
-                            case 3:
-                                return <Typography variant="h5">Thank you for your order! </Typography>;
-                            default:
-                                return <Typography variant="h5">Thank you for your order! </Typography>;
                         }
                     })()}
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
@@ -73,9 +70,9 @@ const Dashboard = () => {
                             )}
                         </Grid>
                         <Grid item>
-                            {activeStep === 4 ? null : (
+                            {activeStep === 3 ? null : (
                                 <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
-                                    {activeStep === 3 ? 'Submit' : 'Next'}
+                                    {activeStep === 2 ? 'Submit' : 'Next'}
                                 </Button>
                             )}
                         </Grid>

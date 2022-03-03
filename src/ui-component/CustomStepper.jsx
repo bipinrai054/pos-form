@@ -25,9 +25,6 @@ export default function CustomStepper({ activeStep }) {
                         <StepLabel>Variant Details</StepLabel>
                     </Step>
                 ) : null}
-                <Step>
-                    <StepLabel>Completed</StepLabel>
-                </Step>
             </Stepper>
         </>
     );
