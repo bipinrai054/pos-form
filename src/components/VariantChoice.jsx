@@ -8,8 +8,8 @@ const SamplePage = () => (
     <Grid
         container
         spacing={3}
-        // sx={{ px: 58, py: 10 }}
-        sx={{ py: 15.8, px: 45 }}
+        // sx={{ py: 15.8, px: 45 }}
+        sx={{ m: 'auto', width: '100%' }}
     >
         <Grid item xs={12}>
             <Paper sx={{ p: 5 }}>

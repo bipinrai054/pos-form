@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable */
 
 // mui
 import { Grid } from '@mui/material';
@@ -6,10 +6,7 @@ import { Grid } from '@mui/material';
 // components
 import { CustomInput, CustomSelect, CustomTextarea } from '../ui-component/CustomInput';
 
-// eslint-disable-next-line
 const ItemDetails = () => {
-    const [itemName, setItemName] = React.useState('');
-    console.log(itemName);
     return (
         <>
             <Grid container spacing={3}>
@@ -19,8 +16,7 @@ const ItemDetails = () => {
                             <CustomSelect label="Category" />
                         </Grid>
                         <Grid item>
-                            {/* <CustomInput type="text" placeholder="Name" label="Item Name" /> */}
-                            <input value={itemName} onChange={(e) => setItemName(e.target.value)} />
+                            <CustomInput type="text" placeholder="Name" label="Item Name" />
                         </Grid>
                         <Grid item>
                             <CustomInput type="number" placeholder="10" label="Alert Quantity" />
@@ -39,6 +35,17 @@ const ItemDetails = () => {
                             <CustomInput label="Image" type="file" />
                         </Grid>
                     </Grid>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={4}>
+                    <CustomInput type="select" placeholder="10" label="Item in Unit" />
+                </Grid>
+                <Grid item xs={4}>
+                    <CustomInput type="number" placeholder="10" label="Purchase Price Inc. Tax" />
+                </Grid>
+                <Grid item xs={4}>
+                    <CustomInput type="number" placeholder="10" label="Purchase Price Exc. Tax" />
                 </Grid>
             </Grid>
             <Grid container sx={{ mt: 5 }}>
