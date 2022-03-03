@@ -1,24 +1,14 @@
-// material-ui
-// import { Typography } from '@mui/material';
-
-// project imports
-// import MainCard from 'ui-component/cards/MainCard';
-
 // mui
-import {
-    // Grid, Typography,
-    Paper
-} from '@mui/material';
+import { Paper } from '@mui/material';
 
 // components
-// import { CustomCheckbox } from '../../ui-component/CustomInput';
-import ItemDetails from '../../components/ItemDetails';
+import Test from '../../components/Test';
 
 // ==============================|| SAMPLE PAGE ||============================== //
 
 const SamplePage = () => (
-    <Paper sx={{ mt: 30 }}>
-        <ItemDetails />;
+    <Paper sx={{ m: 30 }}>
+        <Test />
     </Paper>
 );
 

@@ -9,7 +9,7 @@ const SamplePage = () => (
         container
         spacing={3}
         // sx={{ px: 58, py: 10 }}
-        sx={{ py: 13.1, px: 45 }}
+        sx={{ py: 15.8, px: 45 }}
     >
         <Grid item xs={12}>
             <Paper sx={{ p: 5 }}>
@@ -22,11 +22,11 @@ const SamplePage = () => (
 
                 <Grid container spacing={5}>
                     <Grid item>
-                        <CustomCheckbox type="radio" label="Variant" id="variant" htmlfor="variant" nameType="item_variant" />
+                        <CustomCheckbox type="radio" label="Single" id="variant" htmlfor="variant" nameType="item_variant" />
                     </Grid>
 
                     <Grid item>
-                        <CustomCheckbox type="radio" label="Non-variant" id="non_variant" htmlfor="non_variant" nameType="item_variant" />
+                        <CustomCheckbox type="radio" label="Variable" id="non_variant" htmlfor="non_variant" nameType="item_variant" />
                     </Grid>
                 </Grid>
             </Paper>

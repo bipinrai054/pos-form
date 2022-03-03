@@ -4,7 +4,7 @@ import '../styles/CustomInput.scss';
 import { Typography } from '@mui/material';
 
 //  eslint-disable-next-line
-export function CustomInput({ type, placeholder, label }) {
+export function CustomInput({ type, placeholder, label, value }) {
     return (
         <div>
             {/* eslint-disable-next-line */}
@@ -15,7 +15,7 @@ export function CustomInput({ type, placeholder, label }) {
                     </label>
                 )}
             </Typography>
-            <input id="input" type={type} placeholder={placeholder} />
+            <input id="input" type={type} placeholder={placeholder} value={value} />
         </div>
     );
 }

@@ -14,10 +14,10 @@ export default function CustomStepper({ activeStep }) {
         <>
             <Stepper activeStep={activeStep}>
                 <Step>
-                    <StepLabel>Item Details</StepLabel>
+                    <StepLabel>Choose The Variant</StepLabel>
                 </Step>
                 <Step>
-                    <StepLabel>Choose The Variant</StepLabel>
+                    <StepLabel>Item Details</StepLabel>
                 </Step>
 
                 {showVariantDetails ? (

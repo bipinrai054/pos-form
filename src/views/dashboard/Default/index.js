@@ -47,9 +47,9 @@ const Dashboard = () => {
                     </Grid>
 
                     {activeStep === 0 ? (
-                        <ItemDetails />
-                    ) : activeStep === 1 ? (
                         <VariantChoice />
+                    ) : activeStep === 1 ? (
+                        <ItemDetails />
                     ) : activeStep === 2 ? (
                         <VariantDetails />
                     ) : null}
@@ -63,9 +63,9 @@ const Dashboard = () => {
                             )}
                         </Grid>
                         <Grid item>
-                            {activeStep === 3 ? null : (
+                            {activeStep === 4 ? null : (
                                 <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
-                                    Next
+                                    {activeStep === 3 ? 'Submit' : 'Next'}
                                 </Button>
                             )}
                         </Grid>
