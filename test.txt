@@ -1,0 +1,13 @@
+  {/* <FormLayout /> */}
+
+                        {/* item details start */}
+                        {/* <ItemDetails /> */}
+                        {/* item details end */}
+
+                        {/* variant choosing component start */}
+                        {/* <VariantChoice /> */}
+                        {/* varaint choosing component end */}
+
+                        {/* variant details start */}
+                        {/* <VariantDetails /> */}
+                        {/* variant details end */}
