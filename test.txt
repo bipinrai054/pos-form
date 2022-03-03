@@ -1,13 +1,57 @@
-  {/* <FormLayout /> */}
+ <Grid container spacing={3}>
+            <Grid item>
+                <Typography variant="h4">Dashboard / Menu / Create</Typography>
+            </Grid>
+            <Grid item xs={12}>
+                <Paper sx={{ p: 3 }}>
+                    <Grid sx={{ p: 1, display: 'flex', justifyContent: 'center' }}>
+                        <Grid item xs={8}>
+                            <CustomStepper activeStep={activeStep} />
+                        </Grid>
+                    </Grid>
 
-                        {/* item details start */}
-                        {/* <ItemDetails /> */}
-                        {/* item details end */}
+                    {activeStep === 0 ? (
+                        <VariantChoice />
+                    ) : activeStep === 1 ? (
+                        <ItemDetails />
+                    ) : activeStep === 2 ? (
+                        <VariantDetails />
+                    ) : null}
 
-                        {/* variant choosing component start */}
-                        {/* <VariantChoice /> */}
-                        {/* varaint choosing component end */}
+                    <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
+                        <Grid item>
+                            {activeStep === 0 ? null : (
+                                <Button className="form-btn" variant="outlined" startIcon={<ArrowBack />} onClick={prevStep}>
+                                    Previous
+                                </Button>
+                            )}
+                        </Grid>
+                        <Grid item>
+                            {activeStep === 4 ? null : (
+                                <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
+                                    {activeStep === 3 ? 'Submit' : 'Next'}
+                                </Button>
+                            )}
+                        </Grid>
+                    </Grid>
+                </Paper>
+            </Grid>
+        </Grid>
 
-                        {/* variant details start */}
-                        {/* <VariantDetails /> */}
-                        {/* variant details end */}
+
+
+
+         {(() => {
+                switch (activeStep) {
+                    case 0:
+                        return <VariantDetails />;
+                    case 1:
+                        return <VariantChoice />;
+                    case 2:
+                        return <ItemDetails />;
+                    case 3:
+                        return <Typography variant="h5">Thank you for your order!</Typography>;
+                    default:
+                        return <Typography variant="h5">Thank you for your order!</Typography>;
+                }
+            })()}

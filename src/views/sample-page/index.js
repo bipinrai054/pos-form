@@ -7,7 +7,7 @@ import Test from '../../components/Test';
 // ==============================|| SAMPLE PAGE ||============================== //
 
 const SamplePage = () => (
-    <Paper sx={{ m: 30 }}>
+    <Paper>
         <Test />
     </Paper>
 );

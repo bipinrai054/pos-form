@@ -17,7 +17,8 @@ import ItemDetails from '../../../components/ItemDetails';
 const Dashboard = () => {
     const [activeStep, setActiveStep] = React.useState(0);
 
-    const prevStep = () => {
+    const prevStep = (e) => {
+        e.preventDefault();
         if (activeStep <= 0) {
             setActiveStep(0);
         } else {
@@ -25,7 +26,9 @@ const Dashboard = () => {
         }
     };
 
-    const nextStep = () => {
+    const nextStep = (e) => {
+        e.preventDefault();
+
         if (activeStep >= 4) {
             setActiveStep(4);
         } else {
@@ -46,14 +49,20 @@ const Dashboard = () => {
                         </Grid>
                     </Grid>
 
-                    {activeStep === 0 ? (
-                        <VariantChoice />
-                    ) : activeStep === 1 ? (
-                        <ItemDetails />
-                    ) : activeStep === 2 ? (
-                        <VariantDetails />
-                    ) : null}
-
+                    {(() => {
+                        switch (activeStep) {
+                            case 0:
+                                return <VariantChoice />;
+                            case 1:
+                                return <ItemDetails />;
+                            case 2:
+                                return <VariantDetails />;
+                            case 3:
+                                return <Typography variant="h5">Thank you for your order!</Typography>;
+                            default:
+                                return <Typography variant="h5">Thank you for your order!</Typography>;
+                        }
+                    })()}
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
                             {activeStep === 0 ? null : (

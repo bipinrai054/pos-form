@@ -1,3 +1,5 @@
+import React from 'react';
+
 // mui
 import { Grid } from '@mui/material';
 
@@ -6,6 +8,8 @@ import { CustomInput, CustomSelect, CustomTextarea } from '../ui-component/Custo
 
 // eslint-disable-next-line
 const ItemDetails = () => {
+    const [itemName, setItemName] = React.useState('');
+    console.log(itemName);
     return (
         <>
             <Grid container spacing={3}>
@@ -15,7 +19,8 @@ const ItemDetails = () => {
                             <CustomSelect label="Category" />
                         </Grid>
                         <Grid item>
-                            <CustomInput type="text" placeholder="Name" label="Item Name" />
+                            {/* <CustomInput type="text" placeholder="Name" label="Item Name" /> */}
+                            <input value={itemName} onChange={(e) => setItemName(e.target.value)} />
                         </Grid>
                         <Grid item>
                             <CustomInput type="number" placeholder="10" label="Alert Quantity" />
