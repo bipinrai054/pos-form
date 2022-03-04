@@ -91,11 +91,10 @@ const Dashboard = () => {
                             )}
                         </Grid>
                     </Grid>
-                    <Button variant="contained" onClick={showBottomLeft}>
-                        Test
-                    </Button>
                 </Paper>
             </Grid>
+
+            <Toast ref={toast} position="bottom-right" />
         </Grid>
     );
 };
