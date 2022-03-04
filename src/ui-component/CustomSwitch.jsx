@@ -27,8 +27,8 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
     '& .MuiSwitch-thumb': {
         backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#2196f3',
-        width: 25,
-        height: 25,
+        width: 27,
+        height: 27,
         '&:before': {
             content: "''",
             position: 'absolute',
@@ -47,24 +47,22 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     }
 }));
 
-export default function CustomizedSwitches() {
+export default function CustomizedSwitches({ table }) {
     return (
-        <>
-            <Grid container display="grid" justifyContent="center">
-                <Grid item xs={12}>
-                    <Typography sx={{ mt: 3, mb: 1 }}>
+        <Grid container alignItems="center">
+            <Grid item>
+                {table == 'table' ? null : (
+                    <Typography sx={{ pb: 2, pt: 3 }}>
                         <label>Ticket</label>
                     </Typography>
-                </Grid>
+                )}
 
-                <Grid item xs={12}>
-                    <Stack direction="row" spacing={1} alignItems="center">
-                        <Typography>KOT</Typography>
-                        <MaterialUISwitch />
-                        <Typography>BOT</Typography>
-                    </Stack>
-                </Grid>
+                <Stack direction="row" spacing={1} alignItems="center">
+                    <Typography>KOT</Typography>
+                    <MaterialUISwitch />
+                    <Typography>BOT</Typography>
+                </Stack>
             </Grid>
-        </>
+        </Grid>
     );
 }

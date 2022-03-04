@@ -3,11 +3,11 @@
 import React from 'react';
 
 // mui
-import { Grid } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 
 // components
 import { CustomInput, CustomSelect, CustomTextarea } from '../ui-component/CustomInput';
-import Test from '../ui-component/Test';
+import CustomSwitch from '../ui-component/CustomSwitch';
 
 const ItemDetails = () => {
     return (
@@ -50,8 +50,8 @@ const ItemDetails = () => {
                 <Grid item xs={3.5}>
                     <CustomInput type="number" placeholder="10" label="Price Exc. Tax" />
                 </Grid>
-                <Grid item xs={1.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Test />
+                <Grid item xs={1.5}>
+                    <CustomSwitch table="" />
                 </Grid>
             </Grid>
             <Grid container sx={{ mt: 5 }}>

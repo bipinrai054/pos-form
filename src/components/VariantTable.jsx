@@ -1,8 +1,11 @@
+/*eslint-disable */
+
 // mui
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 
 // components
 import { CustomInput, CustomSelect } from '../ui-component/CustomInput';
+import CustomSwitch from '../ui-component/CustomSwitch';
 
 // icons
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
@@ -19,6 +22,7 @@ export default function BasicTable() {
                         <TableCell>Purchase Price Exc. Tax</TableCell>
                         <TableCell>Purchase Price Inc. Tax</TableCell>
                         <TableCell>Product Image</TableCell>
+                        <TableCell>Ticket</TableCell>
                         <TableCell>
                             <AddCircleIcon className="add-btn" color="primary" fontSize="large" />
                         </TableCell>
@@ -42,7 +46,9 @@ export default function BasicTable() {
                             <CustomInput type="file" />
                         </TableCell>
                         <TableCell component="th" scope="row">
-                            {/* eslint-disable-next-line */}
+                            <CustomSwitch table="table" />
+                        </TableCell>
+                        <TableCell component="th" scope="row">
                             <RemoveCircleIcon sx={{ mt: 3 }} className="remove-btn" fontSize="large" color="error" />
                         </TableCell>
                     </TableRow>
