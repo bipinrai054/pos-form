@@ -7,17 +7,18 @@ import { Grid, Paper, Typography, Button } from '@mui/material';
 // mui-icons
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
+// prime-react
+import { Toast } from 'primereact/toast';
+
 // new components
 import CustomStepper from '../../../ui-component/CustomStepper';
 import VariantDetails from '../../../components/VariantDetails';
 import VariantChoice from '../../../components/VariantChoice';
 import ItemDetails from '../../../components/ItemDetails';
-import InputSummary from '../../../components/InputSummary';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 const Dashboard = () => {
     const [activeStep, setActiveStep] = React.useState(0);
-    const [test, setTest] = React.useState('');
 
     const prevStep = (e) => {
         e.preventDefault();
@@ -37,6 +38,13 @@ const Dashboard = () => {
             setActiveStep((currentStep) => currentStep + 1);
         }
     };
+
+    // toast
+    const toast = React.useRef(null);
+
+    function showBottomLeft() {
+        toast.current.show({ severity: 'success', summary: 'Success', detail: 'Order submitted', life: 3000 });
+    }
 
     return (
         <Grid container spacing={3}>
@@ -71,12 +79,21 @@ const Dashboard = () => {
                         </Grid>
                         <Grid item>
                             {activeStep === 3 ? null : (
-                                <Button className="form-btn" variant="contained" endIcon={<ArrowForward />} onClick={nextStep}>
+                                <Button
+                                    className="form-btn"
+                                    variant="contained"
+                                    endIcon={<ArrowForward />}
+                                    // onClick={nextStep}
+                                    onClick={activeStep === 2 ? showBottomLeft : nextStep}
+                                >
                                     {activeStep === 2 ? 'Submit' : 'Next'}
                                 </Button>
                             )}
                         </Grid>
                     </Grid>
+                    <Button variant="contained" onClick={showBottomLeft}>
+                        Test
+                    </Button>
                 </Paper>
             </Grid>
         </Grid>

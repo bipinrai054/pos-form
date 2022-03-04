@@ -12,6 +12,10 @@ import { store } from 'store';
 // style + assets
 import 'assets/scss/style.scss';
 
+// primereact styles
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
+import 'primereact/resources/primereact.min.css';
+
 // ==============================|| REACT DOM RENDER  ||============================== //
 
 ReactDOM.render(
