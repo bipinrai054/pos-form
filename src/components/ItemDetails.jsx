@@ -7,6 +7,7 @@ import { Grid } from '@mui/material';
 
 // components
 import { CustomInput, CustomSelect, CustomTextarea } from '../ui-component/CustomInput';
+import Test from '../ui-component/Test';
 
 const ItemDetails = () => {
     return (
@@ -40,14 +41,17 @@ const ItemDetails = () => {
                 </Grid>
             </Grid>
             <Grid container spacing={3}>
-                <Grid item xs={4}>
-                    <CustomInput type="select" placeholder="10" label="Item in Unit" />
+                <Grid item xs={3.5}>
+                    <CustomSelect placeholder="10" label="Unit" />
                 </Grid>
-                <Grid item xs={4}>
-                    <CustomInput type="number" placeholder="10" label="Purchase Price Inc. Tax" />
+                <Grid item xs={3.5}>
+                    <CustomInput type="number" placeholder="10" label="Price Inc. Tax" />
                 </Grid>
-                <Grid item xs={4}>
-                    <CustomInput type="number" placeholder="10" label="Purchase Price Exc. Tax" />
+                <Grid item xs={3.5}>
+                    <CustomInput type="number" placeholder="10" label="Price Exc. Tax" />
+                </Grid>
+                <Grid item xs={1.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <Test />
                 </Grid>
             </Grid>
             <Grid container sx={{ mt: 5 }}>
