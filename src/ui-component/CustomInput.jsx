@@ -1,5 +1,7 @@
 /*eslint-disable */
 
+import React from 'react';
+
 import '../styles/CustomInput.scss';
 
 // mui
@@ -35,10 +37,10 @@ export function CustomSelect({ label }) {
                 )}
             </Typography>
             <select id="select">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+                <option value="volvo">PS4</option>
+                <option value="saab">Nintendo Switch</option>
+                <option value="opel">Xbox One X</option>
+                <option value="audi">Google Stadia</option>
             </select>
         </div>
     );
@@ -52,30 +54,34 @@ export function CustomTextarea({ placeholder }) {
     );
 }
 
-export function CustomCheckbox({ label, nameType, id }) {
-    return (
-        <>
-            <input type="radio" id={id} name={nameType} />
-            <label htmlFor={id}>
-                <Grid container>
-                    <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
-                        {label == 'Single' ? (
-                            <AccessibilityIcon sx={{ fontSize: '42px' }} />
-                        ) : (
-                            <ShoppingCartIcon sx={{ fontSize: '42px' }} />
-                        )}
-                    </Grid>
+// export function CustomCheckbox({ label, nameType, id, value }) {
+//     const [itemType, setItemType] = React.useState('single');
 
-                    <Grid item xs={10}>
-                        <Typography fontWeight="fontWeightBold" fontSize="large">
-                            {label}
-                        </Typography>
-                        <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </label>
-        </>
-    );
-}
+//     console.log(itemType);
+
+//     return (
+//         <>
+//             <input type="radio" id={id} name={nameType} value={value} onChange={(e) => setItemType(e.target.value)} />
+//             <label htmlFor={id}>
+//                 <Grid container>
+//                     <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
+//                         {label == 'Single' ? (
+//                             <AccessibilityIcon sx={{ fontSize: '42px' }} />
+//                         ) : (
+//                             <ShoppingCartIcon sx={{ fontSize: '42px' }} />
+//                         )}
+//                     </Grid>
+
+//                     <Grid item xs={10}>
+//                         <Typography fontWeight="fontWeightBold" fontSize="large">
+//                             {label}
+//                         </Typography>
+//                         <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
+//                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+//                         </Typography>
+//                     </Grid>
+//                 </Grid>
+//             </label>
+//         </>
+//     );
+// }

@@ -19,8 +19,8 @@ export default function BasicTable() {
                     <TableRow>
                         <TableCell>Item Name</TableCell>
                         <TableCell>Item in Unit</TableCell>
-                        <TableCell>Purchase Price Exc. Tax</TableCell>
-                        <TableCell>Purchase Price Inc. Tax</TableCell>
+                        <TableCell>Price Exc. Tax</TableCell>
+                        <TableCell>Price Inc. Tax</TableCell>
                         <TableCell>Product Image</TableCell>
                         <TableCell>Ticket</TableCell>
                         <TableCell>

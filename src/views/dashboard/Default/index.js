@@ -18,6 +18,35 @@ import ItemDetails from '../../../components/ItemDetails';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 const Dashboard = () => {
+    // state
+    // item type choice component
+    const [itemType, setItemType] = React.useState('single');
+    // item details component
+    const [itemDetails, setItemDetails] = React.useState({
+        category: '',
+        brand: '',
+        itemName: '',
+        expiryDate: '',
+        alertQuantity: 1,
+        image: '',
+        unit: '',
+        priceIncTax: 1,
+        priceExcTax: 1,
+        ticket: 'KOT',
+        description: ''
+    });
+    // variant details component
+    const [variantName, setVariantName] = React.useState('');
+    const [variantDetails, setVariantDetails] = React.useState({
+        varItemName: '',
+        varUnit: 1,
+        varPriceIncTax: 1,
+        varPriceExcTax: 1,
+        varImage: '',
+        varTicket: 'KOT'
+    });
+
+    // stepper
     const [activeStep, setActiveStep] = React.useState(0);
 
     const prevStep = (e) => {
