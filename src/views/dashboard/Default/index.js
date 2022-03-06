@@ -2,7 +2,7 @@
 
 import React from 'react';
 // mui
-import { Grid, Paper, Typography, Button } from '@mui/material';
+import { Grid, Paper, Typography, Button, Box } from '@mui/material';
 
 // mui-icons
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
@@ -15,6 +15,9 @@ import CustomStepper from '../../../ui-component/CustomStepper';
 import VariantDetails from '../../../components/VariantDetails';
 import VariantChoice from '../../../components/VariantChoice';
 import ItemDetails from '../../../components/ItemDetails';
+
+// ui-components
+import TabPanel from '../../../ui-component/TabPanel';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 const Dashboard = () => {
@@ -75,6 +78,26 @@ const Dashboard = () => {
         toast.current.show({ severity: 'success', summary: 'Success', detail: 'Order submitted', life: 3000 });
     }
 
+    // test
+    // function TabPanel(props) {
+    //     const { children, value, index, ...other } = props;
+    //     return (
+    //         <div
+    //             role="tabpanel"
+    //             hidden={value !== index}
+    //             id={`simple-tabpanel-${index}`}
+    //             aria-labelledby={`simple-tab-${index}`}
+    //             {...other}
+    //         >
+    //             {value === index && (
+    //                 // <Box sx={{ p: 3 }}>
+    //                 <Typography>{children}</Typography>
+    //                 // </Box>
+    //             )}
+    //         </div>
+    //     );
+    // }
+
     return (
         <Grid container spacing={3}>
             <Grid item>
@@ -88,7 +111,8 @@ const Dashboard = () => {
                         </Grid>
                     </Grid>
 
-                    {(() => {
+                    {/* original */}
+                    {/* {(() => {
                         switch (activeStep) {
                             case 0:
                                 return <VariantChoice setItemType={setItemType} />;
@@ -97,7 +121,22 @@ const Dashboard = () => {
                             case 2:
                                 return <VariantDetails />;
                         }
-                    })()}
+                    })()} */}
+
+                    {/* test */}
+                    <TabPanel value={activeStep} index={0}>
+                        <VariantChoice setItemType={setItemType} />
+                    </TabPanel>
+                    <TabPanel value={activeStep} index={1}>
+                        <ItemDetails />
+                    </TabPanel>
+
+                    {itemType === 'variable' && (
+                        <TabPanel value={activeStep} index={2}>
+                            <VariantDetails />
+                        </TabPanel>
+                    )}
+
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
                             {activeStep === 0 ? null : (
