@@ -11,10 +11,7 @@ import { CustomCheckbox } from 'ui-component/CustomInput';
 // mui icons
 import AccessibilityIcon from '@mui/icons-material/Accessibility';
 
-const SamplePage = () => {
-    const [itemType, setItemType] = React.useState('');
-    console.log(itemType);
-
+const SamplePage = ({ setItemType }) => {
     return (
         <Grid container sx={{ py: 15 }}>
             <Grid item xs={12} textAlign="center">

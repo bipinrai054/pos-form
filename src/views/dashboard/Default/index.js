@@ -84,14 +84,14 @@ const Dashboard = () => {
                 <Paper sx={{ p: 3 }}>
                     <Grid sx={{ p: 1, display: 'flex', justifyContent: 'center' }}>
                         <Grid item xs={8}>
-                            <CustomStepper activeStep={activeStep} />
+                            <CustomStepper itemType={itemType} activeStep={activeStep} />
                         </Grid>
                     </Grid>
 
                     {(() => {
                         switch (activeStep) {
                             case 0:
-                                return <VariantChoice />;
+                                return <VariantChoice setItemType={setItemType} />;
                             case 1:
                                 return <ItemDetails />;
                             case 2:

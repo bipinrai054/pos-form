@@ -1,15 +1,13 @@
-import React from 'react';
+/*eslint-disable */
 
+import React from 'react';
 // mui
 import { Stepper, Step, StepLabel } from '@mui/material';
 
 // eslint-disable-next-line
-export default function CustomStepper({ activeStep }) {
-    const [
-        showVariantDetails
-        //  setShowVariantDetails
-    ] = React.useState(true);
-
+export default function CustomStepper({ activeStep, itemType }) {
+    console.log(itemType);
+    const [test, setTest] = React.useState('variant');
     return (
         <>
             <Stepper activeStep={activeStep}>
@@ -20,11 +18,11 @@ export default function CustomStepper({ activeStep }) {
                     <StepLabel>Item Details</StepLabel>
                 </Step>
 
-                {showVariantDetails ? (
+                {itemType === 'variant' && (
                     <Step>
                         <StepLabel>Variant Details</StepLabel>
                     </Step>
-                ) : null}
+                )}
             </Stepper>
         </>
     );
