@@ -9,7 +9,6 @@ import { Box, Grid, Typography } from '@mui/material';
 import { CustomCheckbox } from 'ui-component/CustomInput';
 
 // mui icons
-import AccessibilityIcon from '@mui/icons-material/Accessibility';
 
 const SamplePage = ({ setItemType }) => {
     return (
@@ -25,12 +24,27 @@ const SamplePage = ({ setItemType }) => {
                 {/* custom checkbox */}
                 <Box className="checkbox-container" textAlign="left" sx={{ display: 'flex', justifyContent: 'center' }} alignItems="center">
                     {/* original */}
-                    {/* <CustomCheckbox type="radio" label="Single" id="single" nameType="item_variant" value="single" />
-                    <CustomCheckbox type="radio" label="Variable" id="variant" nameType="item_variant" value="variable" /> */}
+
+                    <CustomCheckbox
+                        type="radio"
+                        label="Single"
+                        id="single"
+                        nameType="item_variant"
+                        value="single"
+                        setItemType={setItemType}
+                    />
+                    <CustomCheckbox
+                        type="radio"
+                        label="Variable"
+                        id="variant"
+                        nameType="item_variant"
+                        value="variable"
+                        setItemType={setItemType}
+                    />
 
                     {/* test checkbox */}
 
-                    <>
+                    {/* <>
                         <input type="radio" id="single" name="item-type" value="single" onChange={(e) => setItemType(e.target.value)} />
                         <label htmlFor="single">
                             <Grid container>
@@ -67,7 +81,7 @@ const SamplePage = ({ setItemType }) => {
                                 </Grid>
                             </Grid>
                         </label>
-                    </>
+                    </> */}
                 </Box>
             </Grid>
         </Grid>

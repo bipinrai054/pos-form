@@ -7,7 +7,6 @@ import { Stepper, Step, StepLabel } from '@mui/material';
 // eslint-disable-next-line
 export default function CustomStepper({ activeStep, itemType }) {
     console.log(itemType);
-    const [test, setTest] = React.useState('variant');
     return (
         <>
             <Stepper activeStep={activeStep}>
@@ -18,7 +17,7 @@ export default function CustomStepper({ activeStep, itemType }) {
                     <StepLabel>Item Details</StepLabel>
                 </Step>
 
-                {itemType === 'variant' && (
+                {itemType === 'variable' && (
                     <Step>
                         <StepLabel>Variant Details</StepLabel>
                     </Step>

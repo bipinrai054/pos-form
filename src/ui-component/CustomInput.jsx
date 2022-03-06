@@ -54,34 +54,30 @@ export function CustomTextarea({ placeholder }) {
     );
 }
 
-// export function CustomCheckbox({ label, nameType, id, value }) {
-//     const [itemType, setItemType] = React.useState('single');
+export function CustomCheckbox({ label, nameType, id, value, setItemType }) {
+    return (
+        <>
+            <input type="radio" id={id} name={nameType} value={value} onChange={(e) => setItemType(e.target.value)} />
+            <label htmlFor={id}>
+                <Grid container>
+                    <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
+                        {label == 'Single' ? (
+                            <AccessibilityIcon sx={{ fontSize: '42px' }} />
+                        ) : (
+                            <ShoppingCartIcon sx={{ fontSize: '42px' }} />
+                        )}
+                    </Grid>
 
-//     console.log(itemType);
-
-//     return (
-//         <>
-//             <input type="radio" id={id} name={nameType} value={value} onChange={(e) => setItemType(e.target.value)} />
-//             <label htmlFor={id}>
-//                 <Grid container>
-//                     <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
-//                         {label == 'Single' ? (
-//                             <AccessibilityIcon sx={{ fontSize: '42px' }} />
-//                         ) : (
-//                             <ShoppingCartIcon sx={{ fontSize: '42px' }} />
-//                         )}
-//                     </Grid>
-
-//                     <Grid item xs={10}>
-//                         <Typography fontWeight="fontWeightBold" fontSize="large">
-//                             {label}
-//                         </Typography>
-//                         <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
-//                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-//                         </Typography>
-//                     </Grid>
-//                 </Grid>
-//             </label>
-//         </>
-//     );
-// }
+                    <Grid item xs={10}>
+                        <Typography fontWeight="fontWeightBold" fontSize="large">
+                            {label}
+                        </Typography>
+                        <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </label>
+        </>
+    );
+}
