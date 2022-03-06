@@ -6,7 +6,6 @@ import { Stepper, Step, StepLabel } from '@mui/material';
 
 // eslint-disable-next-line
 export default function CustomStepper({ activeStep, itemType }) {
-    console.log(itemType);
     return (
         <>
             <Stepper activeStep={activeStep}>

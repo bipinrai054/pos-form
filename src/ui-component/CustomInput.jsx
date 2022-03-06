@@ -5,7 +5,11 @@ import React from 'react';
 import '../styles/CustomInput.scss';
 
 // mui
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, Box, Button } from '@mui/material';
+
+// mui icon
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
 
 export function CustomInput({ type, placeholder, label, value }) {
     return (
@@ -21,10 +25,6 @@ export function CustomInput({ type, placeholder, label, value }) {
         </div>
     );
 }
-
-// mui icon
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AccessibilityIcon from '@mui/icons-material/Accessibility';
 
 export function CustomSelect({ label }) {
     return (

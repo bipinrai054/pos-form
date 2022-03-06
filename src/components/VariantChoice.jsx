@@ -12,7 +12,7 @@ import { CustomCheckbox } from 'ui-component/CustomInput';
 
 const SamplePage = ({ setItemType }) => {
     return (
-        <Grid container sx={{ py: 15 }}>
+        <Grid container sx={{ py: 12 }}>
             <Grid item xs={12} textAlign="center">
                 <Typography variant="h3" gutterBottom>
                     Choose Item Type
@@ -23,8 +23,6 @@ const SamplePage = ({ setItemType }) => {
 
                 {/* custom checkbox */}
                 <Box className="checkbox-container" textAlign="left" sx={{ display: 'flex', justifyContent: 'center' }} alignItems="center">
-                    {/* original */}
-
                     <CustomCheckbox
                         type="radio"
                         label="Single"
@@ -41,47 +39,6 @@ const SamplePage = ({ setItemType }) => {
                         value="variable"
                         setItemType={setItemType}
                     />
-
-                    {/* test checkbox */}
-
-                    {/* <>
-                        <input type="radio" id="single" name="item-type" value="single" onChange={(e) => setItemType(e.target.value)} />
-                        <label htmlFor="single">
-                            <Grid container>
-                                <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
-                                    <AccessibilityIcon sx={{ fontSize: '42px' }} />
-                                </Grid>
-
-                                <Grid item xs={10}>
-                                    <Typography fontWeight="fontWeightBold" fontSize="large">
-                                        Single
-                                    </Typography>
-                                    <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </label>
-                    </>
-                    <>
-                        <input type="radio" id="variant" name="item-type" value="variant" onChange={(e) => setItemType(e.target.value)} />
-                        <label htmlFor="variant">
-                            <Grid container>
-                                <Grid sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} item xs={2}>
-                                    <AccessibilityIcon sx={{ fontSize: '42px' }} />
-                                </Grid>
-
-                                <Grid item xs={10}>
-                                    <Typography fontWeight="fontWeightBold" fontSize="large">
-                                        Variant
-                                    </Typography>
-                                    <Typography sx={{ color: '#a1a5b7' }} variant="subtitle1">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </label>
-                    </> */}
                 </Box>
             </Grid>
         </Grid>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 // mui
-import { Grid, Paper, Typography, Button, Box } from '@mui/material';
+import { Grid, Paper, Typography, Button } from '@mui/material';
 
 // mui-icons
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
@@ -24,6 +24,7 @@ const Dashboard = () => {
     // state
     // item type choice component
     const [itemType, setItemType] = React.useState('single');
+
     // item details component
     const [itemDetails, setItemDetails] = React.useState({
         category: '',
@@ -71,32 +72,12 @@ const Dashboard = () => {
         }
     };
 
-    // toast
+    // prime toast
     const toast = React.useRef(null);
 
     function showBottomLeft() {
         toast.current.show({ severity: 'success', summary: 'Success', detail: 'Order submitted', life: 3000 });
     }
-
-    // test
-    // function TabPanel(props) {
-    //     const { children, value, index, ...other } = props;
-    //     return (
-    //         <div
-    //             role="tabpanel"
-    //             hidden={value !== index}
-    //             id={`simple-tabpanel-${index}`}
-    //             aria-labelledby={`simple-tab-${index}`}
-    //             {...other}
-    //         >
-    //             {value === index && (
-    //                 // <Box sx={{ p: 3 }}>
-    //                 <Typography>{children}</Typography>
-    //                 // </Box>
-    //             )}
-    //         </div>
-    //     );
-    // }
 
     return (
         <Grid container spacing={3}>
@@ -105,25 +86,14 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={12}>
                 <Paper sx={{ p: 3 }}>
+                    {/* stepper */}
                     <Grid sx={{ p: 1, display: 'flex', justifyContent: 'center' }}>
                         <Grid item xs={8}>
                             <CustomStepper itemType={itemType} activeStep={activeStep} />
                         </Grid>
                     </Grid>
 
-                    {/* original */}
-                    {/* {(() => {
-                        switch (activeStep) {
-                            case 0:
-                                return <VariantChoice setItemType={setItemType} />;
-                            case 1:
-                                return <ItemDetails />;
-                            case 2:
-                                return <VariantDetails />;
-                        }
-                    })()} */}
-
-                    {/* test */}
+                    {/* form component */}
                     <TabPanel value={activeStep} index={0}>
                         <VariantChoice setItemType={setItemType} />
                     </TabPanel>
@@ -133,9 +103,11 @@ const Dashboard = () => {
 
                     {itemType === 'variable' && (
                         <TabPanel value={activeStep} index={2}>
-                            <VariantDetails />
+                            <VariantDetails variantDetails={variantDetails} setVariantDetails={setVariantDetails} />
                         </TabPanel>
                     )}
+
+                    {/* next and prev button */}
 
                     <Grid container sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
                         <Grid item>
@@ -151,7 +123,6 @@ const Dashboard = () => {
                                     className="form-btn"
                                     variant="contained"
                                     endIcon={<ArrowForward />}
-                                    // onClick={nextStep}
                                     onClick={activeStep === 2 ? showBottomLeft : nextStep}
                                 >
                                     {activeStep === 2 ? 'Submit' : 'Next'}
