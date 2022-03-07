@@ -1,3 +1,5 @@
+/*eslint-disable */
+
 // mui
 import { Grid, Typography } from '@mui/material';
 

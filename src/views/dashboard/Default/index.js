@@ -21,6 +21,9 @@ import TabPanel from '../../../ui-component/TabPanel';
 
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 const Dashboard = () => {
+    // test
+    const [test, setTest] = React.useState('');
+
     // state
     // item type choice component
     const [itemType, setItemType] = React.useState('single');
@@ -65,12 +68,22 @@ const Dashboard = () => {
     const nextStep = (e) => {
         e.preventDefault();
 
-        if (activeStep >= 4) {
-            setActiveStep(4);
+        // if (activeStep >= 2) {
+        //     setActiveStep(2);
+        // } else {
+        //     setActiveStep((currentStep) => currentStep + 1);
+        // }
+
+        if (itemType === 'single' && activeStep >= 1) {
+            setActiveStep(1);
+        } else if (itemType === 'variable' && activeStep >= 2) {
+            setActiveStep(2);
         } else {
             setActiveStep((currentStep) => currentStep + 1);
         }
     };
+
+    console.log(test);
 
     // prime toast
     const toast = React.useRef(null);
@@ -123,9 +136,19 @@ const Dashboard = () => {
                                     className="form-btn"
                                     variant="contained"
                                     endIcon={<ArrowForward />}
-                                    onClick={activeStep === 2 ? showBottomLeft : nextStep}
+                                    // onClick={activeStep === 2 ? showBottomLeft : nextStep}
+                                    onClick={nextStep}
                                 >
-                                    {activeStep === 2 ? 'Submit' : 'Next'}
+                                    {(() => {
+                                        if (activeStep === 2) {
+                                            return 'Submit';
+                                        }
+                                        if (activeStep === 1 && itemType == 'single') {
+                                            return 'Submit';
+                                        } else {
+                                            return 'Next';
+                                        }
+                                    })()}
                                 </Button>
                             )}
                         </Grid>

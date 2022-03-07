@@ -14,13 +14,8 @@ import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 export default function BasicTable({ variantDetails, setVariantDetails }) {
-    console.log(variantDetails);
-
-    // const [img, setImg] = React.useState(null);
-
     const imgChange = (e) => {
         if (e.target.files && e.target.files.length > 0) {
-            // setImg(e.target.files[0]);
             setVariantDetails({ ...variantDetails, varImage: e.target.files[0] });
         }
     };
@@ -63,11 +58,6 @@ export default function BasicTable({ variantDetails, setVariantDetails }) {
                                         Choose File
                                     </label>
                                 </Button>
-                                {/* {img && (
-                                    <>
-                                        <img style={{ height: '30px', width: '35px' }} src={URL.createObjectURL(img)} alt="test" />
-                                    </>
-                                )} */}
                                 {variantDetails.varImage && (
                                     <>
                                         <>
