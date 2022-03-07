@@ -6,11 +6,7 @@ import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Box, Button } from '@mui/material';
 
 // components
-import {
-    CustomInput,
-    CustomSelect
-    // CustomFileUpload
-} from '../ui-component/CustomInput';
+import { CustomInput, CustomSelect } from '../ui-component/CustomInput';
 import CustomSwitch from '../ui-component/CustomSwitch';
 
 // icons
@@ -20,11 +16,12 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 export default function BasicTable({ variantDetails, setVariantDetails }) {
     console.log(variantDetails);
 
-    const [img, setImg] = React.useState(null);
+    // const [img, setImg] = React.useState(null);
 
     const imgChange = (e) => {
         if (e.target.files && e.target.files.length > 0) {
-            setImg(e.target.files[0]);
+            // setImg(e.target.files[0]);
+            setVariantDetails({ ...variantDetails, varImage: e.target.files[0] });
         }
     };
 
@@ -59,24 +56,27 @@ export default function BasicTable({ variantDetails, setVariantDetails }) {
                             <CustomInput type="number" placeholder="Inc. Tax" />
                         </TableCell>
                         <TableCell style={{ width: '153px' }} component="th" scope="row">
-                            {/* custom file upload component */}
-                            {/* <CustomFileUpload imgChange={imgChange} img={img} /> */}
-
-                            <Box
-                                display="flex"
-                                //  justifyContent="center"
-                                alignItems="center"
-                                sx={{ pt: 2.5 }}
-                            >
+                            <Box display="flex" alignItems="center" sx={{ pt: 2.5 }}>
                                 <input type="file" accept="image/*" id="actual-btn" style={{ display: 'none' }} onChange={imgChange} />
                                 <Button variant="contained" sx={{ mr: 1 }}>
                                     <label style={{ fontSize: '12px' }} className="actual-label" for="actual-btn">
                                         Choose File
                                     </label>
                                 </Button>
-                                {img && (
+                                {/* {img && (
                                     <>
                                         <img style={{ height: '30px', width: '35px' }} src={URL.createObjectURL(img)} alt="test" />
+                                    </>
+                                )} */}
+                                {variantDetails.varImage && (
+                                    <>
+                                        <>
+                                            <img
+                                                style={{ height: '30px', width: '35px' }}
+                                                src={URL.createObjectURL(variantDetails.varImage)}
+                                                alt="test"
+                                            />
+                                        </>
                                     </>
                                 )}
                             </Box>
